@@ -51,7 +51,7 @@
             // 
             textoCarregando.AutoSize = true;
             textoCarregando.Font = new Font("Segoe UI", 32F, FontStyle.Bold);
-            textoCarregando.Location = new Point(12, 9);
+            textoCarregando.Location = new Point(26, 9);
             textoCarregando.Name = "textoCarregando";
             textoCarregando.Size = new Size(401, 72);
             textoCarregando.TabIndex = 1;
