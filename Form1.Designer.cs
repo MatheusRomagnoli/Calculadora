@@ -72,8 +72,10 @@
             Controls.Add(progressBar1);
             Controls.Add(textoCarregando);
             Controls.Add(pictureBox1);
+            FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
