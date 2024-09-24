@@ -11,5 +11,24 @@ namespace Calculadora
         {
 
         }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tmrTempo_Tick(object sender, EventArgs e)
+        {
+            PBbarra.Value += 10;
+            if (PBbarra.Value == 100)
+            {
+                frmCalculadora frmcalc = new frmCalculadora();
+                frmcalc.ShowDialog();
+            }
+            if (PBbarra.Value == 100)
+            {
+                tmrTempo.Enabled = false;
+            }
+        }
     }
 }

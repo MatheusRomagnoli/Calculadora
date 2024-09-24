@@ -28,19 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             pictureBox1 = new PictureBox();
             textoCarregando = new Label();
-            progressBar1 = new ProgressBar();
+            PBbarra = new ProgressBar();
+            tmrTempo = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.macaco_gif;
-            pictureBox1.Location = new Point(-11, 168);
+            pictureBox1.Location = new Point(-14, 210);
+            pictureBox1.Margin = new Padding(4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(819, 288);
+            pictureBox1.Size = new Size(1024, 360);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -49,31 +52,40 @@
             // 
             textoCarregando.AutoSize = true;
             textoCarregando.Font = new Font("Segoe UI", 32F, FontStyle.Bold);
-            textoCarregando.Location = new Point(12, 9);
+            textoCarregando.Location = new Point(15, 11);
+            textoCarregando.Margin = new Padding(4, 0, 4, 0);
             textoCarregando.Name = "textoCarregando";
-            textoCarregando.Size = new Size(401, 72);
+            textoCarregando.Size = new Size(478, 86);
             textoCarregando.TabIndex = 1;
             textoCarregando.Text = "CARREGANDO";
             textoCarregando.Click += label1_Click;
             // 
-            // progressBar1
+            // PBbarra
             // 
-            progressBar1.Location = new Point(12, 84);
-            progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(761, 65);
-            progressBar1.TabIndex = 2;
-            progressBar1.Value = 90;
+            PBbarra.Location = new Point(15, 105);
+            PBbarra.Margin = new Padding(4);
+            PBbarra.Name = "PBbarra";
+            PBbarra.Size = new Size(951, 81);
+            PBbarra.TabIndex = 2;
+            PBbarra.Click += progressBar1_Click;
+            // 
+            // tmrTempo
+            // 
+            tmrTempo.Enabled = true;
+            tmrTempo.Interval = 1000;
+            tmrTempo.Tick += tmrTempo_Tick;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(progressBar1);
+            ClientSize = new Size(1000, 562);
+            Controls.Add(PBbarra);
             Controls.Add(textoCarregando);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(4);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
@@ -86,6 +98,7 @@
 
         private PictureBox pictureBox1;
         private Label textoCarregando;
-        private ProgressBar progressBar1;
+        private ProgressBar PBbarra;
+        private System.Windows.Forms.Timer tmrTempo;
     }
 }
