@@ -12,6 +12,11 @@ namespace Calculadora
 {
     public partial class frmCalculadora : Form
     {
+
+        string operador;
+        int variavel1;
+        int variavel2;
+
         public frmCalculadora()
         {
             InitializeComponent();
@@ -22,9 +27,11 @@ namespace Calculadora
             txtCaixa.Text = txtCaixa.Text + "1";
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnOperaçãoMulti_Click(object sender, EventArgs e)
         {
-
+            this.operador = "*";
+            this.variavel1 = Convert.ToInt32(txtCaixa.Text);
+            txtCaixa.Text = "";
         }
 
         private void btnNumero2_Click(object sender, EventArgs e)
@@ -70,6 +77,57 @@ namespace Calculadora
         private void btnNumero0_Click(object sender, EventArgs e)
         {
             txtCaixa.Text = txtCaixa.Text + "0";
+        }
+
+        private void btnOperaçãoMais_Click(object sender, EventArgs e)
+        {
+            this.operador = "+";
+            this.variavel1 = Convert.ToInt32(txtCaixa.Text);
+            txtCaixa.Text = "";
+        }
+
+        private void btnResultado_Click(object sender, EventArgs e)
+        {
+            this.variavel2 = Convert.ToInt32(txtCaixa.Text);
+            if (this.operador == "+")
+            {
+                string resultado = (variavel1 + variavel2).ToString();
+                txtCaixa.Text = resultado;
+            }
+            if (this.operador == "-")
+            {
+                string resultado = (variavel1 - variavel2).ToString();
+                txtCaixa.Text = resultado;
+            }
+            if (this.operador == "*")
+            {
+                string resultado = (variavel1 * variavel2).ToString();
+                txtCaixa.Text = resultado;
+            }
+            if (this.operador == "/")
+            {
+                string resultado = (variavel1 / variavel2).ToString();
+                txtCaixa.Text = resultado;
+            }
+        }
+
+        private void btnOperaçãoMenos_Click(object sender, EventArgs e)
+        {
+            this.operador = "-";
+            this.variavel1 = Convert.ToInt32(txtCaixa.Text);
+            txtCaixa.Text = "";
+        }
+
+        private void btnOperaçãoDividir_Click(object sender, EventArgs e)
+        {
+            this.operador = "/";
+            this.variavel1 = Convert.ToInt32(txtCaixa.Text);
+            txtCaixa.Text = "";
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtCaixa.Text = "";
         }
     }
 }

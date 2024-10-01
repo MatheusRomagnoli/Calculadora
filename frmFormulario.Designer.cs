@@ -177,6 +177,7 @@
             btnOperaçãoMais.TabIndex = 10;
             btnOperaçãoMais.Text = "+";
             btnOperaçãoMais.UseVisualStyleBackColor = false;
+            btnOperaçãoMais.Click += btnOperaçãoMais_Click;
             // 
             // btnOperaçãoMenos
             // 
@@ -188,6 +189,7 @@
             btnOperaçãoMenos.TabIndex = 11;
             btnOperaçãoMenos.Text = "-";
             btnOperaçãoMenos.UseVisualStyleBackColor = false;
+            btnOperaçãoMenos.Click += btnOperaçãoMenos_Click;
             // 
             // btnOperaçãoMulti
             // 
@@ -199,7 +201,7 @@
             btnOperaçãoMulti.TabIndex = 12;
             btnOperaçãoMulti.Text = "x";
             btnOperaçãoMulti.UseVisualStyleBackColor = false;
-            btnOperaçãoMulti.Click += button1_Click;
+            btnOperaçãoMulti.Click += btnOperaçãoMulti_Click;
             // 
             // btnOperaçãoDividir
             // 
@@ -211,6 +213,7 @@
             btnOperaçãoDividir.TabIndex = 13;
             btnOperaçãoDividir.Text = "/";
             btnOperaçãoDividir.UseVisualStyleBackColor = false;
+            btnOperaçãoDividir.Click += btnOperaçãoDividir_Click;
             // 
             // btnResultado
             // 
@@ -222,6 +225,7 @@
             btnResultado.TabIndex = 14;
             btnResultado.Text = "=";
             btnResultado.UseVisualStyleBackColor = false;
+            btnResultado.Click += btnResultado_Click;
             // 
             // txtCaixa
             // 
@@ -242,6 +246,7 @@
             btnLimpar.TabIndex = 16;
             btnLimpar.Text = "C";
             btnLimpar.UseVisualStyleBackColor = false;
+            btnLimpar.Click += btnLimpar_Click;
             // 
             // frmCalculadora
             // 
