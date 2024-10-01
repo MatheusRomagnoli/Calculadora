@@ -45,6 +45,7 @@
             btnResultado = new Button();
             txtCaixa = new TextBox();
             btnLimpar = new Button();
+            brnConversor = new Button();
             SuspendLayout();
             // 
             // btnNumero1
@@ -229,11 +230,11 @@
             // 
             // txtCaixa
             // 
-            txtCaixa.Location = new Point(23, 9);
+            txtCaixa.Location = new Point(23, 50);
             txtCaixa.Margin = new Padding(3, 2, 3, 2);
             txtCaixa.Multiline = true;
             txtCaixa.Name = "txtCaixa";
-            txtCaixa.Size = new Size(328, 78);
+            txtCaixa.Size = new Size(328, 37);
             txtCaixa.TabIndex = 15;
             // 
             // btnLimpar
@@ -248,12 +249,24 @@
             btnLimpar.UseVisualStyleBackColor = false;
             btnLimpar.Click += btnLimpar_Click;
             // 
+            // brnConversor
+            // 
+            brnConversor.BackColor = SystemColors.ButtonHighlight;
+            brnConversor.Location = new Point(23, 12);
+            brnConversor.Name = "brnConversor";
+            brnConversor.Size = new Size(75, 23);
+            brnConversor.TabIndex = 17;
+            brnConversor.Text = "Conversor";
+            brnConversor.UseVisualStyleBackColor = false;
+            brnConversor.Click += brnConversor_Click;
+            // 
             // frmCalculadora
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
             ClientSize = new Size(367, 396);
+            Controls.Add(brnConversor);
             Controls.Add(btnLimpar);
             Controls.Add(txtCaixa);
             Controls.Add(btnResultado);
@@ -298,5 +311,6 @@
         private Button btnResultado;
         private TextBox txtCaixa;
         private Button btnLimpar;
+        private Button brnConversor;
     }
 }
