@@ -19,15 +19,12 @@ namespace Calculadora
 
         private void tmrTempo_Tick(object sender, EventArgs e)
         {
-            PBbarra.Value += 10;
-            if (PBbarra.Value == 100)
-            {
-                frmCalculadora frmcalc = new frmCalculadora();
-                frmcalc.ShowDialog();
-            }
+            PBbarra.Value += 50;
             if (PBbarra.Value == 100)
             {
                 tmrTempo.Enabled = false;
+                new frmCalculadora().ShowDialog();
+                this.Hide();
             }
         }
     }
