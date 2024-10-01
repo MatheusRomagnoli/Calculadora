@@ -46,6 +46,7 @@
             txtCaixa = new TextBox();
             btnLimpar = new Button();
             brnConversor = new Button();
+            btnConverteCM = new Button();
             SuspendLayout();
             // 
             // btnNumero1
@@ -260,12 +261,24 @@
             brnConversor.UseVisualStyleBackColor = false;
             brnConversor.Click += brnConversor_Click;
             // 
+            // btnConverteCM
+            // 
+            btnConverteCM.BackColor = SystemColors.ButtonHighlight;
+            btnConverteCM.Location = new Point(106, 12);
+            btnConverteCM.Name = "btnConverteCM";
+            btnConverteCM.Size = new Size(86, 23);
+            btnConverteCM.TabIndex = 18;
+            btnConverteCM.Text = "Convert.CM";
+            btnConverteCM.UseVisualStyleBackColor = false;
+            btnConverteCM.Click += btnConverteCM_Click;
+            // 
             // frmCalculadora
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
             ClientSize = new Size(367, 396);
+            Controls.Add(btnConverteCM);
             Controls.Add(brnConversor);
             Controls.Add(btnLimpar);
             Controls.Add(txtCaixa);
@@ -312,5 +325,6 @@
         private TextBox txtCaixa;
         private Button btnLimpar;
         private Button brnConversor;
+        private Button btnConverteCM;
     }
 }

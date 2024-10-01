@@ -140,5 +140,11 @@ namespace Calculadora
             frmConverteCelsiusFahrenheit formularioConverte = new frmConverteCelsiusFahrenheit();
             formularioConverte.ShowDialog();
         }
+
+        private void btnConverteCM_Click(object sender, EventArgs e)
+        {
+            frmConverteCM formularioConverteCM = new frmConverteCM();
+            formularioConverteCM.ShowDialog();
+        }
     }
 }
