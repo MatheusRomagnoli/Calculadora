@@ -274,6 +274,7 @@
             Margin = new Padding(2);
             Name = "frmCalculadora";
             Text = "frmCalculadora";
+            FormClosed += frmCalculadora_FormClosed;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -23,7 +23,7 @@ namespace Calculadora
             if (PBbarra.Value == 100)
             {
                 tmrTempo.Enabled = false;
-                new frmCalculadora().ShowDialog();
+                new frmCalculadora().Show();
                 this.Hide();
             }
         }

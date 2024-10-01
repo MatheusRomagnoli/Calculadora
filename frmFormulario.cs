@@ -129,5 +129,10 @@ namespace Calculadora
         {
             txtCaixa.Text = "";
         }
+
+        private void frmCalculadora_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
