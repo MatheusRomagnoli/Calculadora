@@ -134,5 +134,11 @@ namespace Calculadora
         {
             Application.Exit();
         }
+
+        private void brnConversor_Click(object sender, EventArgs e)
+        {
+            frmConverteCelsiusFahrenheit formularioConverte = new frmConverteCelsiusFahrenheit();
+            formularioConverte.ShowDialog();
+        }
     }
 }
