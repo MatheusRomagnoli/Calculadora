@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCalculadora));
             btnNumero1 = new Button();
             btnNumero4 = new Button();
             btnNumero7 = new Button();
@@ -297,6 +298,7 @@
             Controls.Add(btnNumero7);
             Controls.Add(btnNumero4);
             Controls.Add(btnNumero1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(2);
             Name = "frmCalculadora";
             Text = "frmCalculadora";
